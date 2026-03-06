@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日の運勢 - Fortune App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔮 今日の運勢</h1>
+      <p class="subtitle">あなたの今日の運勢を占います</p>
+    </header>
+
+    <main>
+      <div class="birth-section">
+        <label for="birthday">生年月日を入力してください：</label>
+        <input type="date" id="birthday" name="birthday">
+        <button id="fortuneBtn" onclick="getFortune()">運勢を占う</button>
+      </div>
+
+      <div id="result" class="result hidden">
+        <div class="fortune-card">
+          <div class="date-display" id="dateDisplay"></div>
+          <div class="fortune-rank" id="fortuneRank"></div>
+          <div class="fortune-message" id="fortuneMessage"></div>
+
+          <div class="details-grid">
+            <div class="detail-item">
+              <span class="detail-label">🍀 ラッキーカラー</span>
+              <span class="detail-value" id="luckyColor"></span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🔢 ラッキーナンバー</span>
+              <span class="detail-value" id="luckyNumber"></span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⭐ ラッキーアイテム</span>
+              <span class="detail-value" id="luckyItem"></span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">📍 ラッキー方位</span>
+              <span class="detail-value" id="luckyDirection"></span>
+            </div>
+          </div>
+
+          <div class="advice-section">
+            <div class="advice-item">
+              <h3>❤️ 恋愛運</h3>
+              <p id="loveAdvice"></p>
+              <div class="stars" id="loveStars"></div>
+            </div>
+            <div class="advice-item">
+              <h3>💼 仕事運</h3>
+              <p id="workAdvice"></p>
+              <div class="stars" id="workStars"></div>
+            </div>
+            <div class="advice-item">
+              <h3>💰 金運</h3>
+              <p id="moneyAdvice"></p>
+              <div class="stars" id="moneyStars"></div>
+            </div>
+            <div class="advice-item">
+              <h3>🌿 健康運</h3>
+              <p id="healthAdvice"></p>
+              <div class="stars" id="healthStars"></div>
+            </div>
+          </div>
+
+          <button class="retry-btn" onclick="resetFortune()">もう一度占う</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Fortune App - 毎日更新される運勢占い</p>
+    </footer>
+  </div>
+
+  <script src="fortune.js"></script>
+</body>
+</html>
